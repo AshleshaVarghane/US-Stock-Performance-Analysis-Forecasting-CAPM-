@@ -332,47 +332,6 @@ for i, row in summary_df.iterrows():
 
 ---
 
-### 📈 Cell 10 — Full Interactive Plotly Dashboard (Indian Market: Nifty 50)
-
-Switches context to **Indian market** stocks and builds a **4-panel interactive dashboard**:
-
-```python
-tickers        = ['RELIANCE.NS', 'TCS.NS', 'HDFCBANK.NS', 'INFY.NS', 'BHARTIARTL.NS', 'ITC.NS']
-market_index   = '^NSEI'        # Nifty 50
-risk_free_rate = 0.070          # 7% Indian Govt Bond
-```
-
-#### Panel 1 — Cumulative Returns (vs Nifty 50)
-Line chart showing how ₹1 invested in each stock grew over 5 years vs the Nifty 50 index. Shows which stocks beat the market cumulatively.
-
-#### Panel 2 — CAPM Risk vs Return (SML Chart)
-Interactive scatter plot — stocks plotted by Beta (x-axis) vs Actual Return (y-axis) with the red SML line. Hover to see exact values. Green = undervalued, Maroon = overvalued.
-
-#### Panel 3 — Beta Bar Chart
-Sorted bar chart of each stock's Beta. Quickly shows which stocks carry the most/least systematic risk in your portfolio.
-
-#### Panel 4 — Annualized Alpha Bar Chart
-Green bars = positive Alpha (outperformers).  
-Red/Maroon bars = negative Alpha (underperformers).  
-A horizontal zero-line clearly separates winners from losers.
-
----
-
-## 📊 Interactive Dashboard Preview
-
-```
-┌──────────────────────────────────┬──────────────────────────────────┐
-│  1. 📈 Cumulative Returns        │  2. 🎯 CAPM Risk vs Return       │
-│     5-year growth vs Nifty 50    │     SML + Stock positions         │
-│     (All 6 stocks as lines)      │     🟢 Undervalued / 🔴 Overvalued│
-├──────────────────────────────────┼──────────────────────────────────┤
-│  3. 📊 Beta Bar Chart            │  4. 📉 Annualized Alpha           │
-│     Systematic risk per stock    │     Excess return vs CAPM         │
-│     Sorted low → high            │     🟢 Positive / 🔴 Negative     │
-└──────────────────────────────────┴──────────────────────────────────┘
-```
-
----
 
 ## 📈 Forecast Logic: Buy / Sell Signal
 
